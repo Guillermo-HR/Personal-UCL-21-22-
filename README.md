@@ -16,7 +16,7 @@ Este proyecto cuenta con 2 archivos fuente y 1 principal. Para cumplir el primer
 Para lograr el correcto funcionamiento de los programas no es necesario instalar ningún programa, se puede ejecutar desde internet. No se debe eliminar ni cambiar de nombre ninguna carpeta, después de realizar los reportes la sub carpeta media/plots estará vacia, ya que es una carpeta temporal. Todos los reportes generados se almacenan en la carpeta reportes. 
 
 ## Estado del proyecto y errores
-Por el momento este proyecto está terminado, en un futuro planeo mejorar la creación de los reportes para poder incluir una interpretación o texto complementario a las gráficas, adicionalmente quiero agregar una página final que resuma toda la información y califique el desempeño del jugador.
+Por el momento este proyecto está terminado, en un futuro planeo mejorar la creación de los reportes para poder incluir una interpretación o texto complementario a las gráficas, adicionalmente quiero agregar una página final que resuma toda la información y califique el desempeño del jugador. Otra opcion que quiero implementar es poder realizar comparaciones entre 2 jugadores en especifico.
 
 Problemas detectados:
 - Algunos jugadores tienen el mismo nombre. Solucionado en su mayoría, se solicita un identificador al usuario
