@@ -11,9 +11,13 @@ textoInicio='La UEFA Champion League es un torneo de fútbol continental que se 
 textoInicio2='En la edicion 2021-22 de la UEFA Champion League participaron 32 equipos. La final se jugo en el estadio Stade de France en la ciudad de Paris, el dia 28 de mayo de 2022, donde se enfrentaron Liverpool y Real Madrid. El ganador fue el Real Madrid, y con esto consiguio su 14 copa de Europa.'
 textoInicio3='Este reporte incluye estadisticas sobre el desempeño del jugador en la UEFA Champion League. Para poder comparar de forma objetiva a los jugadores en la mayoria de los datos se presentan en diferentes formatos: cantidad, cantidad por partidos jugados y por minutos jugados. Adicional a esto cada jugador solo es compara con otros de su misma posicion; finalmente se comprara con el resto de jugadores en su posicion y mismo equipo para poder determinar la relevancia que tuvo en su equipo.'
 textoLiga='Los datos para realizar este reporte se obtivieron de la siguiente '
-textoComparacion0=''
-textoComparacion1=''
-
+textoComparacion='Las siguientes dos páginas muestran graficas en las que se compara al jugador de las siguientes formas: 1) jugadores de su misma posicion; 2) jugadores de su mismo equipo y posicion. Siempre se representa con un rombo de color rojo donde se encuentra el jugador y debajo de este el valor correspondiente redondeado a 2 decimales. En algunas de estas graficas se incluye informacion complementaria como: partidos y minutos jugados, cantidad de tiros, pases y cambios de juego; esto puede variar dependiendo de la posicion del jugador. Para interpretar las graficas se debe seguir la suiguiente guia:'
+textoComparacion0_1='Para la graficas.- Goles, Goles por partido, Asistencias, Asistencias por partido, % de tiros con direccion a porteria, Presicion de pase y Presicion de cambio de juego lo optimo seria que el indicador del jugador este lo mas posible hacia la derecha.'
+textoComparacion0_2='Para las graficas.- Minutos entre goles, Minutos entre asistencias, % de tiros sin direccion a porteria, % de tiros bloqueados y Fuera de juego lo optimo seria que el indicador del jugador este lo mas posible hacia la izquierda.'
+textoComparacion0_3='Para las graficas Tiros de esquina cobrados, Tiros libres tirados y Regates no se puede determinar la calidad o eficiencia de un jugador objetivamente en base a estos parametros, por lo que son meramente informativos.'
+textoComparacion1_1='Para las graficas.- Tiros parados, Tiros parados por partido, Porterias en cero y Porsentaje de porterias en cerolo optimo seria que el indicador del jugador este lo mas posible hacia la derecha.'
+textoComparacion1_2='Para las graficas.- Goles permitidos y Goles permetidos por partido lo optimo seria que el indicador del jugador este lo mas posible hacia la izquierda.'
+textoComparacion1_3='Para las graficas.- Penales salvados y Penales salvados por partido el grueso de los porteros no pararon ningun penal, unicamente 5 atajaron penales. Estas graficas no representan la calidad o eficiencia de un jugador de forma objetiva po lo que unicamente se utilizan para deztacar a los pocos porteros que atajaton penales.'
 # Funciones principales
 
 def footer(pdf):
@@ -71,7 +75,7 @@ def introduccion(pdf):
 def pag_partidos(pdf):
     pdf=titulo('Participacion en partidos',pdf)
     pdf.image('media/plots/partidos_minutos.png',x=10,y=25,w=185)
-    #remove('media/plots/partidos_minutos.png')
+    remove('media/plots/partidos_minutos.png')
     pdf.cell(0,59,ln=1) # Por si se quiere agregar texto despues de la grafica
     pdf=footer(pdf)
     return pdf 
@@ -79,41 +83,45 @@ def pag_partidos(pdf):
 def pag_goles(pdf):
     pdf=titulo('Distrubucion de goles',pdf)
     pdf.image('media/plots/goles.png',x=-20,y=18,w=210)
-    #remove('media/plots/goles.png')
+    remove('media/plots/goles.png')
     pdf.cell(0,135,ln=1) # Por si se quiere agregar texto despues de la grafica
     pdf=footer(pdf)
     return pdf
 
 def pag_comparacion0(pdf):
     pdf=titulo('Comparacion con jugadores',pdf)
-    pdf=texto(textoComparacion1,0,3,1,pdf)
+    pdf=texto(textoComparacion,0,3,1,pdf)
+    pdf=texto(textoComparacion0_1,0,3,1,pdf)
+    pdf=texto(textoComparacion0_2,0,3,1,pdf)
+    pdf=texto(textoComparacion0_3,0,3,1,pdf)
     pdf=footer(pdf)
     pdf=titulo('Comparacion con jugadores de la misma posicion',pdf)
     pdf.image('media/plots/comparacion0.png',x=10,y=25,w=180)
-    #remove('media/plots/comparacion0.png')
+    remove('media/plots/comparacion0.png')
     pdf.cell(0,115,ln=1) # Por si se quiere agregar texto despues de la grafica
     pdf=footer(pdf)
     pdf=titulo('Comparacion con jugadores de la misma posicion y equipo',pdf)
     pdf.image('media/plots/comparacion1.png',x=10,y=32,w=180)
-    #remove('media/plots/comparacion1.png')
+    remove('media/plots/comparacion1.png')
     pdf.cell(0,112,ln=1) # Por si se quiere agregar texto despues de la grafica
     pdf=footer(pdf)
     return pdf
 
 def pag_comparacion1(pdf):
     pdf=titulo('Comparacion con jugadores',pdf)
-    pdf=texto(textoComparacion1,0,3,1,pdf)
+    pdf=texto(textoComparacion,0,3,1,pdf)
+    pdf=texto(textoComparacion1_1,0,3,1,pdf)
+    pdf=texto(textoComparacion1_2,0,3,1,pdf)
+    pdf=texto(textoComparacion1_3,0,3,1,pdf)
     pdf=footer(pdf)
     pdf=titulo('Comparacion con jugadores de la misma posicion',pdf)
     pdf.image('media/plots/comparacion0.png',x=10,y=25,w=180)
-    #remove('media/plots/comparacion0.png')
+    remove('media/plots/comparacion0.png')
     pdf.cell(0,97,ln=1) # Por si se quiere agregar texto despues de la grafica
-    pdf=texto(textoInicio,0,3,1,pdf)
     pdf=footer(pdf)
     pdf=titulo('Comparacion con jugadores de la misma posicion y equipo',pdf)
     pdf.image('media/plots/comparacion1.png',x=10,y=32,w=180)
-    #remove('media/plots/comparacion1.png')
+    remove('media/plots/comparacion1.png')
     pdf.cell(0,94,ln=1) # Por si se quiere agregar texto despues de la grafica
-    pdf=texto(textoInicio,0,3,1,pdf)
     pdf=footer(pdf)
     return pdf
