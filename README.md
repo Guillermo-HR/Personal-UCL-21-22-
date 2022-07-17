@@ -7,7 +7,8 @@ Análisis de la UCL 2021-2022. Datos obtenidos de: https://www.kaggle.com/datase
 El proyecto de análisis UCL 2021-22 lo realicé con la intención de practicar los conocimientos adquiridos sobre análisis de datos y gráficas utilizando pandas y matplotlib. 
 
 ## Objetivos
-Responder preguntas que todos los aficionados de fútbol se realizan al término de una temporada como ¿Quién es el máximo goleador de la competencia?, o ¿Quién es el máximo asistidor?, hay datos más específicos por ejemplo ¿Cuál es la posición y equipo que más goles anota?Brindar una forma fácil de comparar el rendimiento de un jugador en específico de la forma más objetiva posible y al mismo tiempo poder generar reportes fáciles de compartir con esta información.
+- Responder preguntas que todos los aficionados de fútbol se realizan al término de una temporada como ¿Quién es el máximo goleador de la competencia?, o ¿Quién es el máximo asistidor?, hay datos más específicos por ejemplo ¿Cuál es la posición y equipo que más goles anota?
+- Brindar una forma fácil de comparar el rendimiento de un jugador en específico de la forma más objetiva posible y al mismo tiempo poder generar reportes fáciles de compartir con esta información.
 
 ## Estructura
 Este proyecto cuenta con 2 archivos fuente y 1 principal. Para cumplir el primer objetivo está el cuaderno data_ analysis, mientras que para el segundo objetivo está el cuaderno reportes. 
