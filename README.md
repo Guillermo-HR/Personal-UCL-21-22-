@@ -11,7 +11,7 @@ El proyecto de análisis UCL 2021-22 lo realicé con la intención de practicar 
 - Brindar una forma fácil de comparar el rendimiento de un jugador en específico de la forma más objetiva posible y al mismo tiempo poder generar reportes fáciles de compartir con esta información.
 
 ## Estructura
-Este proyecto cuenta con 2 archivos fuente y 1 principal. Para cumplir el primer objetivo está el cuaderno data_ analysis, mientras que para el segundo objetivo está el cuaderno reportes. 
+Este proyecto cuenta con 2 archivos fuente y 1 auxilear. Para cumplir el primer objetivo está el cuaderno data_ analysis, mientras que para el segundo objetivo está el cuaderno reportes. 
 
 
 Para lograr el correcto funcionamiento de los programas no es necesario instalar ningún programa, se puede ejecutar desde internet. No se debe eliminar ni cambiar de nombre ninguna carpeta, después de realizar los reportes la sub carpeta media/plots estará vacia, ya que es una carpeta temporal. Todos los reportes generados se almacenan en la carpeta reportes. 
