@@ -65,7 +65,7 @@ def introduccion(pdf):
     pdf=texto(textoInicio,0,3,1,pdf)
     pdf=texto(textoInicio2,0,5,1,pdf)
     pdf=texto(textoInicio3,0,3,1,pdf)
-    pdf.cell(121,4,textoLiga,ln=0)
+    pdf.cell(122,4,textoLiga,ln=0)
     pdf.set_font('Arial', size=12,style='UI')
     pdf.set_text_color(1, 79, 134)
     pdf.cell(13.5,4,'página.',link='https://www.kaggle.com/datasets/azminetoushikwasi/ucl-202122-uefa-champions-league',ln=0)
